@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Editar Artigo</title>
+</head>
+<body>
+
+  <h1>Editar Artigo</h1>
+
+  <form
+    action="/edit/<%= article.id %>"
+    method="POST"
+  >
+
+    <div>
+      <label>Título</label>
+      <br>
+
+      <input
+        type="text"
+        name="title"
+        value="<%= article.title %>"
+      >
+    </div>
+
+    <br>
+
+    <div>
+      <label>Conteúdo</label>
+      <br>
+
+      <textarea
+        name="content"
+        rows="10"
+        cols="50"
+      ><%= article.content %></textarea>
+    </div>
+
+    <br>
+
+    <div>
+      <label>Data</label>
+      <br>
+
+      <input
+        type="date"
+        name="date"
+        value="<%= article.date %>"
+      >
+    </div>
+
+    <br>
+
+    <button type="submit">
+      Salvar Alterações
+    </button>
+
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Novo Artigo</title>
+</head>
+<body>
+
+  <h1>Novo Artigo</h1>
+
+  <form action="/new" method="POST">
+
+    <div>
+      <label>Título</label>
+      <br>
+      <input
+        type="text"
+        name="title"
+        required
+      >
+    </div>
+
+    <br>
+
+    <div>
+      <label>Conteúdo</label>
+      <br>
+      <textarea
+        name="content"
+        rows="10"
+        cols="50"
+        required
+      ></textarea>
+    </div>
+
+    <br>
+
+    <div>
+      <label>Data</label>
+      <br>
+      <input
+        type="date"
+        name="date"
+        required
+      >
+    </div>
+
+    <br>
+
+    <button type="submit">
+      Salvar
+    </button>
+
+  </form>
+
+</body>
+</html>

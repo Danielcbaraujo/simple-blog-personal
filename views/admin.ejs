@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel Administrativo</title>
+</head>
+<body>
+
+  <h1>Painel Administrativo</h1>
+
+  <a href="/new">
+    Novo Artigo
+  </a>
+
+  <hr>
+
+  <ul>
+
+    <% articles.forEach(article => { %>
+
+      <li>
+
+        <strong>
+          <%= article.title %>
+        </strong>
+
+        <a href="/edit/<%= article.id %>">
+          Editar
+        </a>
+
+        <form
+          action="/delete/<%= article.id %>"
+          method="POST"
+          style="display:inline;"
+        >
+
+          <button type="submit">
+            Excluir
+          </button>
+
+        </form>
+
+      </li>
+
+    <% }) %>
+
+  </ul>
+
+</body>
+</html>
